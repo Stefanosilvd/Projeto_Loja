@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forma de Pagamento</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      border-radius: 12px;
+      padding: 40px 50px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 600;
+      font-size: 28px;
+      color: #4b4b7f;
+      letter-spacing: 1.2px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #6b6b8a;
+    }
+
+    input[type="text"],
+    input[type="month"],
+    input[type="password"] {
+      width: 100%;
+      padding: 14px 15px;
+      margin-bottom: 20px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="month"]:focus,
+    input[type="password"]:focus {
+      border-color: #667eea;
+      outline: none;
+      box-shadow: 0 0 8px rgba(102, 126, 234, 0.5);
+    }
+
+    button {
+      background-color: #667eea;
+      color: white;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 15px 0;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    button:hover {
+      background-color: #5a6bd8;
+      box-shadow: 0 8px 20px rgba(90, 107, 216, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Forma de Pagamento</h2>
+    <form action="#" method="POST">
+      <label for="nome">Nome no Cartão</label>
+      <input type="text" id="nome" name="nome" placeholder="Nome completo" required />
+
+      <label for="numero">Número do Cartão</label>
+      <input type="text" id="numero" name="numero" placeholder="1234 5678 9012 3456" maxlength="19" required />
+
+      <label for="validade">Validade</label>
+      <input type="month" id="validade" name="validade" required />
+
+      <label for="cvv">CVV</label>
+      <input type="password" id="cvv" name="cvv" placeholder="123" maxlength="4" required />
+
+      <button type="submit">Pagar Agora</button>
+    </form>
+  </div>
+
+</body>
+</html>
